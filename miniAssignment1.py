@@ -3,10 +3,10 @@ class StringClass:
         self.s = s
 
     def len_str(self):
-        return len(self.s)
+      print(len(self.s))
 
     def str_to_list(self):
-        return [char for char in self.s]
+        print([char for char in self.s])
 
 
 class PairPossible(StringClass):
@@ -23,11 +23,12 @@ class PairPossible(StringClass):
                 has[i] = 1
 
         lis = []
-        for i,val in has.items():
-            if val%2 == 0:
+        for i, val in has.items():
+            if val % 2 == 0:
                 lis.append(i)
 
         return lis
+
 
 class SearchCommonElements(PairPossible):
 
@@ -44,11 +45,11 @@ class SearchCommonElements(PairPossible):
 
 
 c = StringClass("12314532")
-print(c.len_str())
-print(c.str_to_list())
-p = PairPossible("112233")
-ans = p.pair()
-print(ans)
-s = SearchCommonElements("12345",ans)
-print(s.search())
+c.len_str()
+c.str_to_list()
+p = PairPossible(StringClass)
+print(p.pair())
 
+# print(ans)
+# s = SearchCommonElements("12345", ans)
+# print(s.search())
